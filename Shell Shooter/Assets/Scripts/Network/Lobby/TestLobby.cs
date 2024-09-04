@@ -44,10 +44,14 @@ public class TestLobby : MonoBehaviour
         try {
             string lobbyName = "MyLobby";
             int maxPlayers = 4;
-            Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers);
+            CreateLobbyOptions createLobbyOptions = new CreateLobbyOptions {
+                IsPrivate = false,
+            };
+            Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers, createLobbyOptions);
 
             hostLobby = lobby;
-            Debug.Log("Created Lobby! " + lobby.Name + " " + lobby.MaxPlayers);
+
+            Debug.Log("Created Lobby! " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
         } catch (LobbyServiceException e) {
             Debug.LogError(e);
         }
@@ -76,4 +80,21 @@ public class TestLobby : MonoBehaviour
         }
     }
 
+    private async void JoinLobbyByCode(string lobbyCode) {
+        try {
+            await Lobbies.Instance.JoinLobbyByCodeAsync(lobbyCode);
+
+            Debug.Log("Joined Lobby with code " + lobbyCode);
+        } catch (LobbyServiceException e) {
+            Debug.LogError(e);
+        }
+    }
+
+    private async void QuickJoinLobby() {
+        try {
+            await LobbyService.Instance.QuickJoinLobbyAsync();
+        } catch (LobbyServiceException e) {
+            Debug.LogException(e);
+        }
+    }
 }
