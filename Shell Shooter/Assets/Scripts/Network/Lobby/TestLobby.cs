@@ -6,7 +6,6 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class TestLobby : MonoBehaviour

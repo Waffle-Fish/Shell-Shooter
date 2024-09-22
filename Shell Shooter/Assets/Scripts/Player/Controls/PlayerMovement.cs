@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void ProcessMovement() {
-        Debug.Log(GetInput());
         rb.AddForce(GetInput() * moveForce, ForceMode2D.Force);
     }
 
