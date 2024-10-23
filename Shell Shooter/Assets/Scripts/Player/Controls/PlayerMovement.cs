@@ -2,28 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private float moveForce;
-    PlayerControls playerControls;
-    Rigidbody2D rb;
 
+    private InputManager inputManager;
+    private Rigidbody2D rb2D;
 
-    // Start is called before the first frame update
     private void Awake() {
-        playerControls = new PlayerControls();
-        rb = GetComponent<Rigidbody2D>();
+        inputManager = InputManager.Instance;
+        rb2D = GetComponent<Rigidbody2D>(); 
     }
-
-    private void OnEnable() {
-        playerControls.Enable();
-    }
-
-    private void OnDisable() {
-        playerControls.Disable();
-    }
-
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -32,14 +24,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessMovement();
+        Move();
     }
 
-    private void ProcessMovement() {
-        rb.AddForce(GetInput() * moveForce, ForceMode2D.Force);
-    }
-
-    private Vector2 GetInput() {
-        return new Vector2(playerControls.Movement.Horizontal.ReadValue<float>(), playerControls.Movement.Vertical.ReadValue<float>()).normalized;
+    void Move() {
+        rb2D.AddForce(moveForce * inputManager.GetPlayerMovement());
     }
 }

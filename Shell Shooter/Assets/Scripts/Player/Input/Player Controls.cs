@@ -28,19 +28,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""id"": ""9d788d98-7a32-4ec7-b60d-3859857dea67"",
             ""actions"": [
                 {
-                    ""name"": ""Horizontal"",
-                    ""type"": ""Button"",
-                    ""id"": ""849539f8-7e76-4308-bcd4-32f701001955"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Vertical"",
-                    ""type"": ""Button"",
-                    ""id"": ""11fabf7b-aff7-4efb-9d08-aeb0489395b4"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Move"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""7350da40-d5a0-4d7d-a03c-d2cca36ea101"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -48,134 +39,57 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""74d72eed-9fdc-4ff1-bc70-ea788d97e7bf"",
-                    ""path"": ""1DAxis"",
+                    ""name"": ""2D Vector"",
+                    ""id"": ""1771a798-88d2-49a8-baf5-1891f8b4e7af"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Horizontal"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""1d1db084-cb02-4101-8eb9-ff02f974a095"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""39712327-f5d5-4d0c-bfc7-6d5416727acd"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""4b2ae497-d21a-4aca-94d8-d437ac616e86"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""6a6eefd4-132a-47a2-bbd8-391dd8a463d8"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""8c43dfee-65a6-45e6-acf4-3969ac354583"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""15987399-adc1-4c1d-b59e-5ef16716c169"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Vertical"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""f86e9b96-627a-4bf0-991c-9c9e22512e77"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Vertical"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""7c83f833-7cad-49af-8cb2-5ed141bf90ee"",
+                    ""name"": ""up"",
+                    ""id"": ""c668efd3-8a95-473b-8d50-4a7245149f8e"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Vertical"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""3172d151-171e-43b9-a847-55cadf463b91"",
-                    ""path"": ""1DAxis"",
+                    ""name"": ""down"",
+                    ""id"": ""33c1fc4e-9df6-4263-94ad-3c04d3841cc8"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Vertical"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""8aa2bfe0-0159-4168-9c34-16f1cb596f33"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Vertical"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""ef483527-f87f-4fa4-9908-74e27e073f18"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""name"": ""left"",
+                    ""id"": ""320a9d2f-1974-4fc1-ba39-b71a0f766a1c"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Vertical"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""228ed03c-9b81-41c8-96ff-a225f4904ba1"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -183,12 +97,21 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         },
         {
             ""name"": ""Attack"",
-            ""id"": ""06dad156-96aa-4139-8900-58da9d085be2"",
+            ""id"": ""3c9bb1a1-e772-462f-b485-39a5d40943ce"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
+                    ""name"": ""Basic Attack"",
                     ""type"": ""Button"",
-                    ""id"": ""08fd8c02-d275-4315-a553-5024cdbd2eb5"",
+                    ""id"": ""7781143f-4bfb-466b-b7d4-8343536b9b03"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Special Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""9dba7a64-3810-4857-9685-16773ff9d345"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -198,25 +121,36 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""30f65352-ab09-48f3-a880-6b6143a2ff87"",
+                    ""id"": ""4c5b55d4-1939-46d8-8884-fc55f3abbd30"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""Basic Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c212e2d6-cf2c-4cb9-88aa-843e450ba350"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Special Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         },
         {
-            ""name"": ""Menu"",
-            ""id"": ""15b20a02-8232-45b4-af61-ab813daae640"",
+            ""name"": ""Interaction"",
+            ""id"": ""f21fc9b6-1a6a-4dbb-a0db-f4132dd51035"",
             ""actions"": [
                 {
                     ""name"": ""New action"",
                     ""type"": ""Button"",
-                    ""id"": ""f9afe8a5-8af6-4b61-adbe-2c3fb253f8db"",
+                    ""id"": ""5d93c9eb-1ab6-40c3-8390-b8bf79d42751"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -226,7 +160,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""e734ecfc-688f-460f-b01a-0dfb114cce4b"",
+                    ""id"": ""9ecc5c73-e965-4539-b869-be5af710f9c7"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
@@ -242,14 +176,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
 }");
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
-        m_Movement_Horizontal = m_Movement.FindAction("Horizontal", throwIfNotFound: true);
-        m_Movement_Vertical = m_Movement.FindAction("Vertical", throwIfNotFound: true);
+        m_Movement_Move = m_Movement.FindAction("Move", throwIfNotFound: true);
         // Attack
         m_Attack = asset.FindActionMap("Attack", throwIfNotFound: true);
-        m_Attack_Newaction = m_Attack.FindAction("New action", throwIfNotFound: true);
-        // Menu
-        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
-        m_Menu_Newaction = m_Menu.FindAction("New action", throwIfNotFound: true);
+        m_Attack_BasicAttack = m_Attack.FindAction("Basic Attack", throwIfNotFound: true);
+        m_Attack_SpecialAttack = m_Attack.FindAction("Special Attack", throwIfNotFound: true);
+        // Interaction
+        m_Interaction = asset.FindActionMap("Interaction", throwIfNotFound: true);
+        m_Interaction_Newaction = m_Interaction.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -311,14 +245,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // Movement
     private readonly InputActionMap m_Movement;
     private List<IMovementActions> m_MovementActionsCallbackInterfaces = new List<IMovementActions>();
-    private readonly InputAction m_Movement_Horizontal;
-    private readonly InputAction m_Movement_Vertical;
+    private readonly InputAction m_Movement_Move;
     public struct MovementActions
     {
         private @PlayerControls m_Wrapper;
         public MovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Horizontal => m_Wrapper.m_Movement_Horizontal;
-        public InputAction @Vertical => m_Wrapper.m_Movement_Vertical;
+        public InputAction @Move => m_Wrapper.m_Movement_Move;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -328,22 +260,16 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MovementActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MovementActionsCallbackInterfaces.Add(instance);
-            @Horizontal.started += instance.OnHorizontal;
-            @Horizontal.performed += instance.OnHorizontal;
-            @Horizontal.canceled += instance.OnHorizontal;
-            @Vertical.started += instance.OnVertical;
-            @Vertical.performed += instance.OnVertical;
-            @Vertical.canceled += instance.OnVertical;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
         }
 
         private void UnregisterCallbacks(IMovementActions instance)
         {
-            @Horizontal.started -= instance.OnHorizontal;
-            @Horizontal.performed -= instance.OnHorizontal;
-            @Horizontal.canceled -= instance.OnHorizontal;
-            @Vertical.started -= instance.OnVertical;
-            @Vertical.performed -= instance.OnVertical;
-            @Vertical.canceled -= instance.OnVertical;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
         }
 
         public void RemoveCallbacks(IMovementActions instance)
@@ -365,12 +291,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // Attack
     private readonly InputActionMap m_Attack;
     private List<IAttackActions> m_AttackActionsCallbackInterfaces = new List<IAttackActions>();
-    private readonly InputAction m_Attack_Newaction;
+    private readonly InputAction m_Attack_BasicAttack;
+    private readonly InputAction m_Attack_SpecialAttack;
     public struct AttackActions
     {
         private @PlayerControls m_Wrapper;
         public AttackActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Attack_Newaction;
+        public InputAction @BasicAttack => m_Wrapper.m_Attack_BasicAttack;
+        public InputAction @SpecialAttack => m_Wrapper.m_Attack_SpecialAttack;
         public InputActionMap Get() { return m_Wrapper.m_Attack; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -380,16 +308,22 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_AttackActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_AttackActionsCallbackInterfaces.Add(instance);
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
+            @BasicAttack.started += instance.OnBasicAttack;
+            @BasicAttack.performed += instance.OnBasicAttack;
+            @BasicAttack.canceled += instance.OnBasicAttack;
+            @SpecialAttack.started += instance.OnSpecialAttack;
+            @SpecialAttack.performed += instance.OnSpecialAttack;
+            @SpecialAttack.canceled += instance.OnSpecialAttack;
         }
 
         private void UnregisterCallbacks(IAttackActions instance)
         {
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
+            @BasicAttack.started -= instance.OnBasicAttack;
+            @BasicAttack.performed -= instance.OnBasicAttack;
+            @BasicAttack.canceled -= instance.OnBasicAttack;
+            @SpecialAttack.started -= instance.OnSpecialAttack;
+            @SpecialAttack.performed -= instance.OnSpecialAttack;
+            @SpecialAttack.canceled -= instance.OnSpecialAttack;
         }
 
         public void RemoveCallbacks(IAttackActions instance)
@@ -408,61 +342,61 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     }
     public AttackActions @Attack => new AttackActions(this);
 
-    // Menu
-    private readonly InputActionMap m_Menu;
-    private List<IMenuActions> m_MenuActionsCallbackInterfaces = new List<IMenuActions>();
-    private readonly InputAction m_Menu_Newaction;
-    public struct MenuActions
+    // Interaction
+    private readonly InputActionMap m_Interaction;
+    private List<IInteractionActions> m_InteractionActionsCallbackInterfaces = new List<IInteractionActions>();
+    private readonly InputAction m_Interaction_Newaction;
+    public struct InteractionActions
     {
         private @PlayerControls m_Wrapper;
-        public MenuActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Menu_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public InteractionActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Interaction_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Interaction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
-        public void AddCallbacks(IMenuActions instance)
+        public static implicit operator InputActionMap(InteractionActions set) { return set.Get(); }
+        public void AddCallbacks(IInteractionActions instance)
         {
-            if (instance == null || m_Wrapper.m_MenuActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_MenuActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_InteractionActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_InteractionActionsCallbackInterfaces.Add(instance);
             @Newaction.started += instance.OnNewaction;
             @Newaction.performed += instance.OnNewaction;
             @Newaction.canceled += instance.OnNewaction;
         }
 
-        private void UnregisterCallbacks(IMenuActions instance)
+        private void UnregisterCallbacks(IInteractionActions instance)
         {
             @Newaction.started -= instance.OnNewaction;
             @Newaction.performed -= instance.OnNewaction;
             @Newaction.canceled -= instance.OnNewaction;
         }
 
-        public void RemoveCallbacks(IMenuActions instance)
+        public void RemoveCallbacks(IInteractionActions instance)
         {
-            if (m_Wrapper.m_MenuActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_InteractionActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IMenuActions instance)
+        public void SetCallbacks(IInteractionActions instance)
         {
-            foreach (var item in m_Wrapper.m_MenuActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_InteractionActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_MenuActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_InteractionActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public MenuActions @Menu => new MenuActions(this);
+    public InteractionActions @Interaction => new InteractionActions(this);
     public interface IMovementActions
     {
-        void OnHorizontal(InputAction.CallbackContext context);
-        void OnVertical(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
     }
     public interface IAttackActions
     {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnBasicAttack(InputAction.CallbackContext context);
+        void OnSpecialAttack(InputAction.CallbackContext context);
     }
-    public interface IMenuActions
+    public interface IInteractionActions
     {
         void OnNewaction(InputAction.CallbackContext context);
     }
