@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3830951240392963916}
   - component: {fileID: 45663882910231980}
+  - component: {fileID: 1595747411351709309}
   m_Layer: 0
   m_Name: Bubble Shooter
   m_TagString: Untagged
@@ -169,6 +170,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1595747411351709309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479447729027694209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444583c782a24f040990b956dc6bf422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6376541644945707808
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +196,8 @@ GameObject:
   - component: {fileID: 597063602019377360}
   - component: {fileID: 8053094663538248390}
   - component: {fileID: 574413996256528847}
+  - component: {fileID: 2937808554088213513}
+  - component: {fileID: 2637796185826767529}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -311,6 +326,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 5
+--- !u!114 &2937808554088213513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376541644945707808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab17833b28335084e8a410a33ebad676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2637796185826767529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376541644945707808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ddc0f0c3667a847a203c130fb04693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6381164268761261021
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +399,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -480,7 +519,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2

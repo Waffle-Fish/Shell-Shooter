@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class InputManager : NetworkBehaviour
 {
-    public static InputManager Instance { get; private set;}
-
     private PlayerControls playerControls;
 
     private void Awake() {
-        if (Instance != null && Instance != this) Destroy(this); 
-        else Instance = this; 
 
         playerControls = new();
         // Cursor.visible = false;
@@ -19,14 +16,23 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable() {
         playerControls.Movement.Enable();
+        playerControls.Attack.Enable();
     }
 
     private void OnDisable() {
         playerControls.Movement.Disable();
+        playerControls.Attack.Disable();
     }
 
     public Vector2 GetPlayerMovement() {
-        Debug.Log(playerControls.Movement.Move.ReadValue<Vector2>());
         return playerControls.Movement.Move.ReadValue<Vector2>();
+    }
+
+    public bool IsBasicAttackPressed() {
+        return playerControls.Attack.BasicAttack.WasPressedThisFrame();
+    }
+
+    public bool IsSpecialAttackPressed() {
+        return playerControls.Attack.SpecialAttack.WasPressedThisFrame();
     }
 }

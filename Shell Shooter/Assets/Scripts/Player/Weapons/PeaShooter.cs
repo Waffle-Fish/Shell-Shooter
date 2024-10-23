@@ -11,6 +11,11 @@ public class PeaShooter : Weapon
 
     public override void ProcessAttack()
     {
-        
+        ps.Play();
+    }
+
+    public override void StopAttack()
+    {
+        ps.Stop();
     }
 }

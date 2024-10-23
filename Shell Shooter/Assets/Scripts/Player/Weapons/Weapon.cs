@@ -11,4 +11,6 @@ public abstract class Weapon : MonoBehaviour
 
     abstract public void ProcessAttack();
 
+    abstract public void StopAttack();
+
 }
