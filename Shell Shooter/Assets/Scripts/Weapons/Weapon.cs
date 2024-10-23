@@ -9,7 +9,7 @@ public abstract class Weapon : MonoBehaviour
     // Time between consecutive uses of this attack
     protected float Cooldown;
 
-    abstract public void ProcessAttack();
+    abstract public void StartAttack();
 
     abstract public void StopAttack();
 

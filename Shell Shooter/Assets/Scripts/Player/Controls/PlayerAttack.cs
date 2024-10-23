@@ -28,7 +28,7 @@ public class PlayerAttack : NetworkBehaviour
             if (toggleAttack) {
                 foreach (Weapon weapon in weapons)
                 {
-                    weapon.ProcessAttack();
+                    weapon.StartAttack();
                 }
             } else {
                 foreach (Weapon weapon in weapons)
