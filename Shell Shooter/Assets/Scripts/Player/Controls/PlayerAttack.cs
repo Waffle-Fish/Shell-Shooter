@@ -22,7 +22,7 @@ public class PlayerAttack : NetworkBehaviour
 
     private void ProcessBasicAttack()
     {
-        if (!IsOwner && weapons.Count == 0) return;
+        if (!IsOwner || weapons.Count == 0) return;
         if(inputManager.IsBasicAttackPressed()) {
             toggleAttack = !toggleAttack;
             if (toggleAttack) {
