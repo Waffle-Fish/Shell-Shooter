@@ -9,6 +9,7 @@ public class PlayerAttack : NetworkBehaviour
 {
     private InputManager inputManager;
     private List<Weapon> weapons = new();
+    private bool toggleAttack = false;
 
     private void Awake() {
         inputManager = GetComponent<InputManager>();
@@ -23,16 +24,18 @@ public class PlayerAttack : NetworkBehaviour
     {
         if (!IsOwner && weapons.Count == 0) return;
         if(inputManager.IsBasicAttackPressed()) {
-            foreach (Weapon weapon in weapons)
-            {
-                weapon.ProcessAttack();
+            toggleAttack = !toggleAttack;
+            if (toggleAttack) {
+                foreach (Weapon weapon in weapons)
+                {
+                    weapon.ProcessAttack();
+                }
+            } else {
+                foreach (Weapon weapon in weapons)
+                {
+                    weapon.StopAttack();
+                }
             }
         }
-        // } else {
-        //     foreach (Weapon weapon in weapons)
-        //     {
-        //         weapon.StopAttack();
-        //     }
-        // }
     }
 }
