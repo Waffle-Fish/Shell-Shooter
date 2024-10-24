@@ -4,7 +4,7 @@ using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class BasicProjectileBehavior : NetworkBehaviour
+public class BasicProjectileBehavior : MonoBehaviour
 {
     public float DamageVal;
     public float MoveForce;
