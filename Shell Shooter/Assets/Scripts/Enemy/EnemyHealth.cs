@@ -4,6 +4,9 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
+    ObjectPool expPool;
+
+    [SerializeField]
     float MaxHp;
     float currentHp;
 
@@ -28,5 +31,8 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log(gameObject.name + " has died!");
         gameObject.SetActive(false);
+        GameObject exp = expPool.GetObject();
+        exp.transform.position = transform.position;
+        exp.SetActive(true);
     }
 }
