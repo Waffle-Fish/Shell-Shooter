@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-[RequireComponent(typeof(ObjectPool))]
 public class PeaShooter : Weapon
 {
     [SerializeField]
@@ -10,13 +10,15 @@ public class PeaShooter : Weapon
     float cooldown;
     [SerializeField]
     Vector2 spawnOffset;
+    [SerializeField]
+    GameObject projectile;
 
-    ObjectPool projectiles;
+    NetworkObjectPool projectiles;
     float timer = 0f;
     bool IsFiring = false;
 
     private void Awake() {
-        projectiles = GetComponent<ObjectPool>();
+        projectiles = NetworkObjectPool.Singleton;
     }
 
     private void Update() {
@@ -24,9 +26,8 @@ public class PeaShooter : Weapon
         timer -= Time.deltaTime;
         if (timer <= 0f) {
             timer = cooldown;
-            GameObject p = projectiles.GetObject();
-            p.SetActive(true);
-            p.transform.position = transform.position + (Vector3)spawnOffset;
+            NetworkObject p = projectiles.GetNetworkObject(projectile, transform.position + (Vector3)spawnOffset, Quaternion.identity);
+            p.gameObject.SetActive(true);
         }
     }
 

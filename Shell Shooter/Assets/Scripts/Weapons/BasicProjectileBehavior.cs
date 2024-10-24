@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class BasicProjectileBehavior : MonoBehaviour
+public class BasicProjectileBehavior : NetworkBehaviour
 {
     public float DamageVal;
     public float MoveForce;
@@ -22,7 +23,6 @@ public class BasicProjectileBehavior : MonoBehaviour
     private void OnDisable() {
         rb2D.velocity = Vector2.zero;
         timer = Lifetime;
-        transform.position = transform.parent.position;
     }
 
     private void Update() {
