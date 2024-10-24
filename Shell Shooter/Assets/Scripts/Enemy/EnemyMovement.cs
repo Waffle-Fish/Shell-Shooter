@@ -21,13 +21,23 @@ public class EnemyMovement : MonoBehaviour
     private void Awake() {
         movePattern = movePatternObj.GetComponent<EnemyMovePattern>();
     }
-    
-    private void Start() {
-        transform.position = movePattern.Positions[0];
 
+    private void Start() {
         boundSize *= PointMarginOfError;
-        UpdatePointBounds();
         finalBounds = new Bounds(movePattern.Positions[^1], boundSize);
+        Initialize();
+    }
+
+    private void OnEnable()
+    {
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        transform.position = movePattern.Positions[0];
+        posIndex = 1;
+        UpdatePointBounds();
     }
 
     // Update is called once per frame
@@ -45,7 +55,10 @@ public class EnemyMovement : MonoBehaviour
             posIndex++;
             if (posIndex >= movePattern.Positions.Count) {
                 if (movePattern.loop) posIndex = 0;
-                else return;
+                else {
+                    gameObject.SetActive(false);
+                    return;
+                };
             }
             UpdatePointBounds();
         }

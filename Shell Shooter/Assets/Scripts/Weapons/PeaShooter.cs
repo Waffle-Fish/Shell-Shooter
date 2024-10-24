@@ -10,8 +10,8 @@ public class PeaShooter : Weapon
     float cooldown;
     [SerializeField]
     Vector2 spawnOffset;
-    [SerializeField]
-    GameObject projectile;
+    // [SerializeField]
+    // GameObject projectile;
 
     // NetworkObjectPool projectiles;
     ObjectPool projectiles;

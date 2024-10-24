@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: -6836426970961461760}
   - component: {fileID: -4201858770732659315}
   m_Layer: 0
-  m_Name: TestProjectile
-  m_TagString: PlayerProjectiles
+  m_Name: TestEnemyProjectile
+  m_TagString: EnemyProjectiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.4147855, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.42735004, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageVal: 5
-  MoveForce: 25
+  MoveForce: 5
   Lifetime: 5
 --- !u!114 &-6836426970961461760
 MonoBehaviour:
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2459879158
+  GlobalObjectIdHash: 2568338046
   InScenePlacedSourceGlobalObjectIdHash: 2459879158
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

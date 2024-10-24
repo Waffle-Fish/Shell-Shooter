@@ -1,11 +1,9 @@
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField]
-    ObjectPool expPool;
-
     [SerializeField]
     float MaxHp;
     float currentHp;
@@ -14,7 +12,8 @@ public class EnemyHealth : MonoBehaviour
         currentHp = MaxHp;
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("PlayerProjectiles")) {
+        Debug.Log(other.name);
+        if (other.CompareTag("EnemyProjectiles")) {
             TakeDamage(other.GetComponent<BasicProjectileBehavior>().DamageVal);
         }
     }
@@ -30,8 +29,5 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log(gameObject.name + " has died!");
         gameObject.SetActive(false);
-        GameObject exp = expPool.GetObject();
-        exp.transform.position = transform.position;
-        exp.SetActive(true);
     }
 }
