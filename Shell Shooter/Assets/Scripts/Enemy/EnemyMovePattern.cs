@@ -29,27 +29,33 @@ public class EnemyMovePattern : MonoBehaviour
         lineRenderer.widthMultiplier = 0.1f;
     }
 
+    // At the end of the list will loop back to the first index
+    public bool loop = false;
     private List<Point> points = new();
-    private List<Vector3> positions = new();
+    public List<Vector3> Positions { get; private set;} = new();
     LineRenderer lineRenderer;
 
     private void Awake() {
         lineRenderer = GetComponent<LineRenderer>();
         UpdateLineRendererPositions();
     }
+    
+    private void Start() {
+        HidePattern();
+    }
 
     public void UpdateLineRendererPositions() {
         points.Clear();
-        positions.Clear();
+        Positions.Clear();
         GetComponentsInChildren<Point>(points);
         foreach (Point point in points)
         {
-            positions.Add(point.transform.position);
+            Positions.Add(point.transform.position);
         }
 
         if (!lineRenderer) lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.positionCount = positions.Count;
-        lineRenderer.SetPositions(positions.ToArray());
+        lineRenderer.positionCount = Positions.Count;
+        lineRenderer.SetPositions(Positions.ToArray());
         lineRenderer.widthMultiplier = 0.1f;
     }
 
