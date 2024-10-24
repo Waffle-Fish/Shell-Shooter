@@ -13,12 +13,14 @@ public class PeaShooter : Weapon
     [SerializeField]
     GameObject projectile;
 
-    NetworkObjectPool projectiles;
+    // NetworkObjectPool projectiles;
+    ObjectPool projectiles;
     float timer = 0f;
     bool IsFiring = false;
 
     private void Awake() {
-        projectiles = NetworkObjectPool.Singleton;
+        // projectiles = NetworkObjectPool.Singleton;
+        projectiles = GetComponent<ObjectPool>();
     }
 
     private void Update() {
@@ -26,7 +28,8 @@ public class PeaShooter : Weapon
         timer -= Time.deltaTime;
         if (timer <= 0f) {
             timer = cooldown;
-            NetworkObject p = projectiles.GetNetworkObject(projectile, transform.position + (Vector3)spawnOffset, Quaternion.identity);
+            // NetworkObject p = projectiles.GetNetworkObject(projectile, transform.position + (Vector3)spawnOffset, Quaternion.identity);
+            GameObject p = projectiles.GetObject();
             p.gameObject.SetActive(true);
         }
     }

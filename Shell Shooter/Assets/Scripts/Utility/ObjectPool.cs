@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class ObjectPool : NetworkBehaviour
+public class ObjectPool : MonoBehaviour
 {
     [SerializeField]
     private int maxObjectCount;
+    
     public GameObject objectToCopy;
+
     public List<GameObject> objectPool = new();
 
     private void Awake() {
+        GameObject temp;
         for (int i = 0; i < maxObjectCount; i++) {
-            GameObject temp = Instantiate(NetworkManager.GetNetworkPrefabOverride(objectToCopy));
-            var tempNetworkObject = temp.GetComponent<NetworkObject>();
-            tempNetworkObject.Spawn();
+            temp = Instantiate(objectToCopy, transform);
             temp.SetActive(false);
             objectPool.Add(temp);
         }

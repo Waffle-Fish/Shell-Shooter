@@ -5,7 +5,7 @@ using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(InputManager))]
-public class PlayerAttack : NetworkBehaviour
+public class PlayerAttack : MonoBehaviour
 {
     private InputManager inputManager;
     private List<Weapon> weapons = new();
@@ -22,7 +22,7 @@ public class PlayerAttack : NetworkBehaviour
 
     private void ProcessBasicAttack()
     {
-        if (!IsOwner || weapons.Count == 0) return;
+        if (/*!IsOwner ||*/ weapons.Count == 0) return;
         if(inputManager.IsBasicAttackPressed()) {
             toggleAttack = !toggleAttack;
             if (toggleAttack) {
