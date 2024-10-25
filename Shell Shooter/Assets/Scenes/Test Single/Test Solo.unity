@@ -413,7 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &29776700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,6 +717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &79758563
@@ -834,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &85833480
@@ -951,6 +953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &102139579
@@ -1068,6 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &111803909
@@ -1295,7 +1299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &118848959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,6 +1548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &200325407
@@ -1762,8 +1767,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
+--- !u!1 &277372018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277372019}
+  m_Layer: 0
+  m_Name: EnemyProjectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &277372019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277372018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1001 &286119479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1879,6 +1916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &309845767
@@ -2230,7 +2268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &314668363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2419,6 +2457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &388175785
@@ -2957,6 +2996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &469149595
@@ -4241,6 +4281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &642507564
@@ -4358,6 +4399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &680736081
@@ -4475,6 +4517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &688849698
@@ -4800,7 +4843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &714978771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5088,7 +5131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!61 &800566054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5342,7 +5385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &846327740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5484,6 +5527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &887646733
@@ -5647,7 +5691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &887646739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5867,7 +5911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &938203941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6243,7 +6287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &965820311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6499,7 +6543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &970716725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6754,7 +6798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &982971545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6896,6 +6940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1042494195
@@ -7201,6 +7246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1043776799
@@ -7364,7 +7410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &1043776805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7506,6 +7552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1088669682
@@ -7985,7 +8032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &1190836474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8159,6 +8206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1204100120
@@ -8308,6 +8356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &1237267212
@@ -8425,6 +8474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1239383892
@@ -8709,7 +8759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &1245190574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9138,6 +9188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1280039291
@@ -9375,6 +9426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1321291436
@@ -9660,6 +9712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &1340079226
@@ -9777,6 +9830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1340128609
@@ -10353,6 +10407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1444114688
@@ -10759,6 +10814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1496116859
@@ -11984,7 +12040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &1620555842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12126,6 +12182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1651278836
@@ -12509,7 +12566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePatternObj: {fileID: 6970662106391048213}
   moveSpeed: 20
-  PointMarginOfError: 0.1
+  PointMarginOfError: 0.2
 --- !u!114 &1685186818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12833,6 +12890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 0}
   objectToCopy: {fileID: 4111694147021472016, guid: e0badfc06999a3047a270e5d690517d1, type: 3}
   objectPool: []
 --- !u!1001 &1822921675
@@ -12950,6 +13008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1850394423
@@ -13220,6 +13279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1929410059 stripped
@@ -13240,6 +13300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1001 &1932703303
@@ -13357,6 +13418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1935357773
@@ -13608,6 +13670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &1994098082
@@ -13824,6 +13887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxObjectCount: 100
+  newParent: {fileID: 277372019}
   objectToCopy: {fileID: 4803036518748944947, guid: e7dc15f62d4baeb4e9f0243ebf887c69, type: 3}
   objectPool: []
 --- !u!1 &542834392717097189 stripped
@@ -14224,3 +14288,4 @@ SceneRoots:
   - {fileID: 1799062571}
   - {fileID: 976100909}
   - {fileID: 1328763366}
+  - {fileID: 277372019}

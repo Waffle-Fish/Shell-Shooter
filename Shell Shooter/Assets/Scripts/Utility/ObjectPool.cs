@@ -7,6 +7,8 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField]
     private int maxObjectCount;
+    [SerializeField]
+    private Transform newParent;
     
     public GameObject objectToCopy;
 
@@ -14,8 +16,9 @@ public class ObjectPool : MonoBehaviour
 
     private void Awake() {
         GameObject temp;
+        Transform parent = (newParent) ? newParent : transform;
         for (int i = 0; i < maxObjectCount; i++) {
-            temp = Instantiate(objectToCopy, transform);
+            temp = Instantiate(objectToCopy, parent);
             temp.SetActive(false);
             objectPool.Add(temp);
         }
