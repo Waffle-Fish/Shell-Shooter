@@ -33,6 +33,7 @@ public class BasicProjectileBehavior : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Untagged")) return;
         gameObject.SetActive(false);
     }
 }
