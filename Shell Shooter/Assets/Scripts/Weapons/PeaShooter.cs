@@ -30,8 +30,9 @@ public class PeaShooter : Weapon
             timer = cooldown;
             // NetworkObject p = projectiles.GetNetworkObject(projectile, transform.position + (Vector3)spawnOffset, Quaternion.identity);
             GameObject p = projectiles.GetObject();
-            p.SetActive(true);
             p.transform.position = transform.position + (Vector3)spawnOffset;
+            p.transform.Rotate(transform.rotation.eulerAngles);
+            p.SetActive(true);
         }
     }
 

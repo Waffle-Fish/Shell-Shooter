@@ -3,17 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnableWave : MonoBehaviour
+public class WaveScheduler : MonoBehaviour
 {
     [Serializable]
-    struct Pair {
-        public GameObject wave;
-        [Tooltip("In seconds")]
+    struct Wave {
+        public GameObject gameObj;
+        [Tooltip("When the wave is enabled since start of scene, in seconds")]
         public float timeToEnable;
     }
 
     [SerializeField]
-    List<Pair> waves;
+    List<Wave> waves;
 
     float timer = 0f;
     int ind = 0;
@@ -21,7 +21,7 @@ public class EnableWave : MonoBehaviour
     private void Awake() {
         foreach (var w in waves)
         {
-            w.wave.SetActive(false);
+            w.gameObj.SetActive(false);
         }    
     }
 
@@ -30,7 +30,7 @@ public class EnableWave : MonoBehaviour
         if (ind >= waves.Count) return;
         timer += Time.deltaTime;
         if (timer >= waves[ind].timeToEnable) {
-            waves[ind].wave.SetActive(true);
+            waves[ind].gameObj.SetActive(true);
             ind++;
         }
     }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject movePatternObj;
     private EnemyMovePattern movePattern;
 
     [SerializeField]
@@ -19,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     int posIndex = 1;
 
     private void Awake() {
-        movePattern = movePatternObj.GetComponent<EnemyMovePattern>();
+        movePattern = transform.parent.parent.GetComponent<EnemyMovePattern>();
     }
 
     private void Start() {
@@ -30,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        Initialize();
+        // Initialize();
     }
 
     private void Initialize()

@@ -31,8 +31,9 @@ public class EnemyMovePattern : MonoBehaviour
 
     // At the end of the list will loop back to the first index
     public bool loop = false;
-    private List<Point> points = new();
     public List<Vector3> Positions { get; private set;} = new();
+    
+    private List<Point> points = new();
     LineRenderer lineRenderer;
 
     private void Awake() {
