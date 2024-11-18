@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class WaveScheduler : MonoBehaviour
@@ -18,11 +19,19 @@ public class WaveScheduler : MonoBehaviour
     float timer = 0f;
     int ind = 0;
 
+    [Button]
+    public void OrganizeWaves() {
+        waves.Sort(delegate(Wave x, Wave y) {
+            return (int)(x.timeToEnable - y.timeToEnable);
+        });
+    }
+
     private void Awake() {
         foreach (var w in waves)
         {
             w.gameObj.SetActive(false);
         }    
+        OrganizeWaves();
     }
 
     void Update()

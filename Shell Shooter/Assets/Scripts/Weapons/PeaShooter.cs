@@ -28,10 +28,10 @@ public class PeaShooter : Weapon
         timer -= Time.deltaTime;
         if (timer <= 0f) {
             timer = cooldown;
-            // NetworkObject p = projectiles.GetNetworkObject(projectile, transform.position + (Vector3)spawnOffset, Quaternion.identity);
             GameObject p = projectiles.GetObject();
-            p.transform.position = transform.position + (Vector3)spawnOffset;
-            p.transform.Rotate(transform.rotation.eulerAngles);
+            p.transform.SetLocalPositionAndRotation(transform.position + (Vector3)spawnOffset, transform.rotation);
+            // p.transform.position = transform.position + (Vector3)spawnOffset;
+            // p.transform.rotation = transform.rotation;
             p.SetActive(true);
         }
     }
