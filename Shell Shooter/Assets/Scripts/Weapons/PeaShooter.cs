@@ -29,9 +29,8 @@ public class PeaShooter : Weapon
         if (timer <= 0f) {
             timer = cooldown;
             GameObject p = projectiles.GetObject();
-            p.transform.SetLocalPositionAndRotation(transform.position + (Vector3)spawnOffset, transform.rotation);
-            // p.transform.position = transform.position + (Vector3)spawnOffset;
-            // p.transform.rotation = transform.rotation;
+            Vector3 newPos = transform.position + transform.right * spawnOffset.x + transform.up * spawnOffset.y;
+            p.transform.SetPositionAndRotation(newPos, transform.rotation);
             p.SetActive(true);
         }
     }

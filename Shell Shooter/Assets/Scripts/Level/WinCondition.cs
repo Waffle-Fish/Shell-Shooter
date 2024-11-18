@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public enum StageType {Time, Elimination}
+    // Time = Stage will end after a certain amount of time
+    // Elimination = Stage will end after all enemies are defeated or have left the scene
+    public StageType winCon = StageType.Time;
+
+    [SerializeField]
+    [Tooltip("How long the stage lasts, in seconds")]
+    private float timeToClear;
+
+    private void Start() {
         
     }
 

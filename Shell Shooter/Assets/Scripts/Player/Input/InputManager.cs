@@ -35,4 +35,8 @@ public class InputManager : MonoBehaviour
     public bool IsSpecialAttackPressed() {
         return playerControls.Attack.SpecialAttack.WasPressedThisFrame();
     }
+
+    public bool IsToggleLookPressed() {
+        return playerControls.Movement.ToggleLook.WasPressedThisFrame();
+    }
 }

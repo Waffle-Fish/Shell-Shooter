@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private InputManager inputManager;
     private Rigidbody2D rb2D;
 
+    private bool isLookOn = true;
+
     private void Awake() 
     {
         rb2D = GetComponent<Rigidbody2D>(); 
@@ -29,9 +31,19 @@ public class PlayerMovement : MonoBehaviour
     {
         // if (!IsOwner) return;
         Move();
+        ToggleLook();
+        if (isLookOn) Look();
     }
 
     void Move() {
         rb2D.AddForce(moveForce * inputManager.GetPlayerMovement());
+    }
+
+    void Look() {
+        transform.up = (Vector2)(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+    }
+
+    void ToggleLook() {
+        if (inputManager.IsToggleLookPressed()) isLookOn = !isLookOn;
     }
 }
