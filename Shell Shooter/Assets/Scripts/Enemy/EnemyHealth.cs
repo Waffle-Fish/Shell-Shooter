@@ -9,6 +9,11 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     float MaxHp;
     float currentHp;
+    Transform graveyard;
+
+    private void Awake() {
+        graveyard = GameObject.FindGameObjectWithTag("Graveyard").transform;    
+    }
 
     private void Start() {
         currentHp = MaxHp;
@@ -33,5 +38,6 @@ public class EnemyHealth : MonoBehaviour
         GameObject exp = expPool.GetObject();
         exp.transform.position = transform.position;
         exp.SetActive(true);
+        transform.parent = graveyard;
     }
 }

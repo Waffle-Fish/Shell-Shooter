@@ -1948,6 +1948,37 @@ Transform:
   - {fileID: 799608939}
   m_Father: {fileID: 982689997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &592448825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592448826}
+  m_Layer: 0
+  m_Name: DeadEnemies
+  m_TagString: Graveyard
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592448826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592448825}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1297630019}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &617970869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2435,12 +2466,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644767179}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23, y: -10.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1297630019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &681540038
 PrefabInstance:
@@ -4102,6 +4133,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3034677760655380309, guid: 36257554a9933fd4982bceec22fd323b, type: 3}
   m_PrefabInstance: {fileID: 1285783012}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1297630018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297630019}
+  m_Layer: 0
+  m_Name: Dumpster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1297630019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297630018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23, y: 10.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 592448826}
+  - {fileID: 644767180}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1300749714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5360,7 +5424,7 @@ MonoBehaviour:
   - gameObj: {fileID: 691002569}
     timeToEnable: 2
   - gameObj: {fileID: 1323444141497907807}
-    timeToEnable: 20
+    timeToEnable: 5
 --- !u!1 &1575485920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5405,6 +5469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91a4150b29833b499407412daca81b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winCon: 1
+  timeToClear: 0
+  waveScheduler: {fileID: 1552713140}
 --- !u!1 &1615792882
 GameObject:
   m_ObjectHideFlags: 0
@@ -6857,7 +6924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3794962255431886700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7594,5 +7661,5 @@ SceneRoots:
   - {fileID: 1552713139}
   - {fileID: 1799062571}
   - {fileID: 976100909}
-  - {fileID: 644767180}
   - {fileID: 1575485921}
+  - {fileID: 1297630019}

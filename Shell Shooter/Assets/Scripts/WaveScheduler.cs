@@ -43,4 +43,9 @@ public class WaveScheduler : MonoBehaviour
             ind++;
         }
     }
+
+    public float GetLastWaveTimeToEnable() {
+        if (waves.Count == 0) return -1f;
+        return waves[^1].timeToEnable;
+    }
 }

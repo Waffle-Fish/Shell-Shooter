@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
         currentHp = MaxHp;
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log(other.name);
         if (other.CompareTag("EnemyProjectiles")) {
             TakeDamage(other.GetComponent<BasicProjectileBehavior>().DamageVal);
         }
